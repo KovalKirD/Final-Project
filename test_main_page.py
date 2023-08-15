@@ -1,4 +1,4 @@
-# Тест Кейсы
+# Тесты Главной Страницы
 from pages.main_page import MainPage  # импортируем класс
 from pages.login_page import LoginPage
 

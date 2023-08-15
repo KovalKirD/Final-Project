@@ -3,8 +3,8 @@ from selenium.common import NoSuchElementException
 
 class BasePage:
     def __init__(self, browser, url, timeout=10):  # конструктор класса
-        self.browser = browser  # назначить браузер
-        self.url = url          # присвоить ссылку
+        self.browser = browser                 # назначить браузер
+        self.url = url                         # присвоить ссылку
         self.browser.implicitly_wait(timeout)  # неявное ожидание элемента
 
     def open(self):  # открывает страницу

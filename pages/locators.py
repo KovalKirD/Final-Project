@@ -9,5 +9,8 @@ class LoginPageLocators:
     REGISTER_FORM = (By.CSS_SELECTOR, '#register_form')
 
 class ProductPageLocators:
-    BUTTON_ADD_BASKET = (By.CSS_SELECTOR, '.btn-add-to-basket')
-    BASKET_ADDED_NAME = (By.CSS_SELECTOR, '')
+    BUTTON_ADD_BASKET = (By.CSS_SELECTOR, '.btn-add-to-basket')  # кнопка: "Добавить в Корзину"
+    NAME_ADDED_BASKET = (By.CSS_SELECTOR, '#messages > div:nth-child(1) > div > strong')  # название: "Товар добавленный в козину"
+    NAME_PRODUCT = (By.CSS_SELECTOR,'div.col-sm-6.product_main > h1')  # название: "Товар"
+    PRICE_PRODUCT = (By.CSS_SELECTOR, '.product_main > p.price_color') # цена товара
+    PRICE_ADDED_BASKET = (By.CSS_SELECTOR, '.in > div > p:nth-child(1) > strong')  # цена товара добаленного в корзину

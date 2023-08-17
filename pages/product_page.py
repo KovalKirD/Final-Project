@@ -19,7 +19,7 @@ class ProductPage(BasePage):
         assert self.price_product.text == self.price_added_basket.text, \
             'Product price not match basket product price'
 
-    def should_not_be_success_message(self):  # проверка: "Успешное сообщение"
+    def should_not_be_success_message(self):  # проверка: "Успешное сообщение не появилось"
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MASSAGE), \
             'Success message is presented, but should not be'
 

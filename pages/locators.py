@@ -14,3 +14,4 @@ class ProductPageLocators:
     NAME_PRODUCT = (By.CSS_SELECTOR,'div.col-sm-6.product_main > h1')  # название: "Товар"
     PRICE_PRODUCT = (By.CSS_SELECTOR, '.product_main > p.price_color') # цена товара
     PRICE_ADDED_BASKET = (By.CSS_SELECTOR, '.in > div > p:nth-child(1) > strong')  # цена товара добаленного в корзину
+    SUCCESS_MASSAGE = (By.CSS_SELECTOR, '#messages > div:nth-child(1)')  # успешное сообщение

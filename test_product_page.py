@@ -2,6 +2,7 @@
 import time
 import pytest
 from pages.product_page import ProductPage
+from pages.basket_page import BasketPage
 
 offer_number = [n for n in range(10)]
 @pytest.mark.parametrize('offer', offer_number)
@@ -51,3 +52,13 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     page = ProductPage(browser, link)
     page.open()
     page.go_to_login_page()
+
+@pytest.mark.basket
+def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
+    link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
+    page = ProductPage(browser, link)
+    page.open()
+    page.go_to_basket()
+    page = BasketPage(browser, '')
+    page.should_be_empty_massage()
+    page.should_not_be_items_in_basket()

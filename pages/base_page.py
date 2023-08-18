@@ -13,15 +13,19 @@ class BasePage:
         self.url = url                         # присвоить ссылку
         self.browser.implicitly_wait(timeout)  # неявное ожидание элемента
 
+    def open(self):  # открыть страницу
+        self.browser.get(self.url)
+
     def go_to_login_page(self):  # перейти на страницу авторизации
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID)
         link.click()
 
+    def go_to_basket(self):  # перейти в корзину
+        view_basket = self.browser.find_element(*BasePageLocators.VIEW_BASKET)
+        view_basket.click()
+
     def should_be_login_link(self):  # проверить ссылку на логин
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), 'Login link is not presented'
-
-    def open(self):  # открывает страницу
-        self.browser.get(self.url)
 
     def is_element_present(self, how, what):  # перехватчик исключений: элемент представлен
         try:

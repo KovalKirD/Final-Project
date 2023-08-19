@@ -1,6 +1,5 @@
 
 __init__.py
-requirements.txt
 /.pytest_cache/
 /Users/kir/PycharmProjects/STEPIK_Selenium/Final-Project/.pytest_cache
 *.pyc

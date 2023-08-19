@@ -7,9 +7,6 @@ from pages.login_page import LoginPage
 
 @pytest.mark.login
 class TestUserAddToBasketFromProductPage:
-    # offer_number = [n for n in range(10)]
-    # @pytest.mark.parametrize('offer', offer_number)
-    # f'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{offer}'
     @pytest.fixture(scope='function', autouse=True)
     def setup(self, browser):
         link = 'http://selenium1py.pythonanywhere.com/en-gb/accounts/login/'

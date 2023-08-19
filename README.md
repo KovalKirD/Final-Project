@@ -1,10 +1,16 @@
-# Final-Project
+## Final-Project
 Final Project for StepikCourse-SeleniumAndPython
 
-Start
+## Start
 
-Install dependencies:
-pip install -r requirements.txt
+1. Install dependencies:
 
-Run the required tests:
-pytest -v --tb=line --language=en -m need_review
+    ```
+    pip install -r requirements.txt
+    ```
+
+2. Run the required tests:
+
+    ```
+    pytest -v --tb=line --language=en -m need_review
+    ```

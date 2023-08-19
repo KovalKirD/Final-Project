@@ -17,7 +17,7 @@ class BasePage:
         self.browser.get(self.url)
 
     def go_to_login_page(self):  # перейти на страницу авторизации
-        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID)
+        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
 
     def should_be_authorized_user(self):
